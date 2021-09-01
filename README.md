@@ -1,6 +1,6 @@
-# npm Packages
+# Web App intended to Explain React to Others (Built in React)
 
-1.
-2.
-3.
-4.
+## Modules :
+1.react-router-dom
+2.react-icons
+3.react-bootstrap (with import 'bootstrap/dist/css/bootstrap.css'; in App,js)
