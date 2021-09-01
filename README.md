@@ -5,4 +5,5 @@
 - [react-icons]
 - [react-bootstrap]
 ```sh
-'bootstrap/dist/css/bootstrap.css';``` 
+'bootstrap/dist/css/bootstrap.css';
+``` 
