@@ -6,7 +6,7 @@ import Code from './Code';
 
 const MultiComponent = () => 
 {
-    let explain = <Ex title="MultiComponent"/>;
+    let explain = <Ex title="MULTI COMPONENT"/>;
     let code = <Code/>;
     let page = <MultiComponentContent/>;
     return (

@@ -1,24 +1,16 @@
 import React from 'react';
 import CodeSegment from './../../Utils/CodeSegment';
+import './../../style.css';
+
 const Ex = (props) => {
     let {title} = props;
 
-    const testToCopy= ` import './App.css';
-    import ComponentName from "./ComponentName";
-    
-    function App() {
-      return (
-          <ComponentName/>
-      );
-    }
-    
-    export default App; `;
-
     return (
         <>
-        <center><h1>{title} </h1></center>
+        <center><h1 className="ex-font">{title} </h1></center>
         <br/>
-        <p>
+        <p className="ex-font">
+        <h3>Definizione e Return</h3><br/>
         Una <code>Component</code> non è nient'altro che una <strong>funzione</strong> contenuta all'interno di un file Javascript, in questo caso una costante che contiene una funzione : <br/><br/>
         <CodeSegment language="javascript">
         {`
@@ -75,7 +67,7 @@ const Ex = (props) => {
             </QualunqueTag>
         `}
         </CodeSegment>
-
+        <h3>Fragment</h3><br/>
         L'importante è che il <code>return</code> ritorni come elemento <strong>1 solo elemento</strong>, darebbe errore in caso contrario, esempio :
         <br/>
         <br/>
@@ -124,8 +116,10 @@ const Ex = (props) => {
             }
             `}   
         </CodeSegment>
+        
         La cosa importante è appunto che il Return contenga come "Oggetto ritornato" 1 Frammento, che però può contenerne INFINITI altri.<br/><br/>
 
+        <h3>Import/Export</h3><br/>
         Ora che abbiamo la nostra <code>const</code> creata all'interno del nostro file (ad esempio) <code>ComponentName.js</code> dobbiamo solo andarla ad esportare come default<br/>
         ed importarla dove necessario.<br/>
 

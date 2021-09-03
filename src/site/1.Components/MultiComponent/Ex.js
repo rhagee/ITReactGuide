@@ -5,9 +5,10 @@ const Ex = (props) => {
     let {title} = props;
     return (
         <>
-        <center><h1>{title} </h1></center>
+        <center><h1 className="ex-font">{title} </h1></center>
         <br/>
-        <p>
+        <p className="ex-font">
+            <h3>Nested Component</h3><br/>
             In <strong>React</strong> si possono sviluppare applicazioni web che sfruttano le <strong>Nested Components</strong>.<br/>
             Questo è uno dei punti chiave, nonchè vantaggio che da <strong>React</strong> durante lo sviluppo.<br/><br/>
 
@@ -37,6 +38,7 @@ const Ex = (props) => {
 
             Ovviamente no, possiamo andare a creare <strong>PIU Component</strong> all'interno di <strong>1 solo File</strong> e sfruttarle all'interno del File stesso.<br/><br/>
 
+            <h3>Definizione ed Utilizzo</h3><br/>
             Supponiamo di avere il nostro file Javascript <code>ComponentPrimaria.js</code> scritto come di base : <br/><br/>
 
             <CodeSegment language="javascript">

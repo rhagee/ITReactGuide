@@ -19,7 +19,7 @@ const StandardContent = (props) => {
             <div className="row d-none d-xl-flex" style={{width:"75%"}}>
                 <div className="col"><center><h1>Codice:</h1></center></div>
                 <div className="col"><center><h1>Pagina:</h1></center></div>
-                    <div class="w-100"></div>
+                    <div className="w-100"></div>
                 <CenterShadowBox>
                     {code}
                 </CenterShadowBox>
@@ -33,13 +33,13 @@ const StandardContent = (props) => {
             {/*Monitor from XS to LG*/}
             <div className="row d-flex d-xl-none" style={{width:"75%"}}>
                 <div className="col"><center><h1>Codice:</h1></center></div>
-                <div class="w-100"></div>
+                <div className="w-100"></div>
                 <CenterShadowBox>
                     {code}
                 </CenterShadowBox>
-                <div class="w-100"></div>
+                <div className="w-100"></div>
                 <div className="col"><center><h1>Pagina:</h1></center></div>
-                <div class="w-100"></div>
+                <div className="w-100"></div>
                 <CenterShadowBox>
                     <center>
                         {page}

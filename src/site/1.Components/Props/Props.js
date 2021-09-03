@@ -5,7 +5,7 @@ import StandardContent from "../../Utils/StandardContent";
 
 const Props = () => 
 {
-    let explain = <Ex title="Props and Children"/>
+    let explain = <Ex title="PROPS AND CHILDREN"/>
     let code = <Code/>
     let page = <PropsContent/>
 

@@ -9,6 +9,8 @@ const Code = () => {
             <br/>*/}
              <CodeSegment language="javascript">
             {`
+                import React from 'react';
+
                 //Component Primaria
                 const ComponentPrimaria = () =>
                 {

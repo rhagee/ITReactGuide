@@ -6,7 +6,7 @@ import StandardContent from "../../Utils/StandardContent";
 
 const BasicComponent = () => {
     
-    let explain = <Ex title="Basic Component"/>
+    let explain = <Ex title="BASIC COMPONENT"/>
     let code = <Code/>
     let page = <BasicComponentContent/>
 

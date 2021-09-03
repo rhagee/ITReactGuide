@@ -3,8 +3,10 @@ import React from 'react';
 const CenterShadowBox = (props) => {
     let {children,col} = props;
 
-    if(col==null || col=="")
+    if(col==null || col==="")
+    {
         col = "col";
+    }
 
     let cls = "explain-container rounded shadow-lg "+col;
     

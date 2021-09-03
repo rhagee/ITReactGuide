@@ -31,7 +31,7 @@
   color: white;
   text-align: center;
   font-size: 40px;
-  font-family: Brush Script MT;
+  font-family: Segoe Script;
   padding: 0px 50px 0px 50px;
 }
 
@@ -162,7 +162,6 @@
   /*border : solid 1px black;*/
   padding: 50px;
   width: 70%;
-  box-shadow: rgba(0, 0, 0, 0.2);
 }
 
 .example-container {
@@ -172,4 +171,8 @@
 
 .code {
   font-family: Consolas, "courier new";
+}
+
+.ex-font {
+  font-family: Trebuchet MS;
 }

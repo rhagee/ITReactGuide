@@ -5,9 +5,9 @@ const Ex = (props) => {
     let {title} = props;
     return (
         <>
-        <center><h1>{title} </h1></center>
+        <center><h1 className="ex-font">{title} </h1></center>
         <br/>
-        <p>
+        <p className="ex-font">
             <br/>
             <Warn>
                 <p>In questa spiegaizone sono presenti elementi da conoscere spiegati in <strong>JSX</strong>,<br/>
@@ -28,8 +28,7 @@ const Ex = (props) => {
             <br/>
             <code>button</code>, che non è nient'altro che una Component base dell'HTML (già presente infatti in React DOM).
             <br/><br/>
-            In questo caso le <strong>Props</strong> della <strong>Component</strong>
-            sono : <br/>
+            In questo caso le <strong>Props</strong> della <strong>Component</strong> sono : <br/>
             <code>type</code><br/>
             <code>style</code><br/>
             <code>onClick</code><br/><br/> 
