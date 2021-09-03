@@ -1,203 +1,178 @@
-.menu
-{
-    color:white;
+.menu {
+  color: white;
+  z-index: 10;
 }
 
-.phone-menu
-{
-    width:100%;
-    height:80px;
-    background-color :#333333; 
+.phone-menu {
+  width: 100%;
+  height: 80px;
+  background-color: #333333;
 }
 
-.menu-ul
-{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+.menu-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
 }
 
-.menu-li
-{
-    margin-top:30px;
-    float : left;
+.menu-li {
+  margin-top: 30px;
+  float: left;
 }
 
-.menu-li :hover
-{
-    background-color : #222222;
+.menu-li :hover {
+  background-color: #222222;
 }
 
-.menu ul li .menu-title
-{
-    display: block;
-    color: white;
-    text-align: center;
-    font-size : 40px;
-    font-family : Brush Script MT;
-    padding : 0px 50px 0px 50px;
+.menu ul li .menu-title {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-family: Segoe Script;
+  padding: 0px 50px 0px 50px;
 }
 
-.menu ul .dropDown
-{
-    margin-top:30px;
-    float : left;
+.menu ul .dropDown {
+  margin-top: 30px;
+  float: left;
 }
 
-.menu ul .dropDown :hover .sub-menu-div
-{
-    display:block;
+.menu ul .dropDown :hover .sub-menu-div {
+  display: block;
 }
 
-.menu ul .standard
-{
-    margin-top:30px;
-    float : left;
+.menu ul .standard {
+  margin-top: 30px;
+  float: left;
 }
 
-.menu ul .standard :hover
-{
-    background-color : #333333;
+.menu ul .standard :hover {
+  background-color: #333333;
 }
 
-.menu ul .separator
-{
-    width : 2px;
-    margin: 0 50px 0 10px;
-    height: 130px;
-    background-color : rgb(212, 212, 212);
+.menu ul .separator {
+  width: 2px;
+  margin: 0 50px 0 10px;
+  height: 130px;
+  background-color: rgb(212, 212, 212);
 }
 
-.menu ul li .Link
-{
-    display: block;
-    color: white;
-    text-align: center;
-    padding : 20px 40px 20px 40px;
-    border-radius : 7%;
-    margin : 0 auto;
-    text-decoration: none;
+.menu ul li .Link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 40px 20px 40px;
+  border-radius: 7%;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
-.menu ul li .SubLink
-{
-    display: block;
-    color: white;
-    text-align: center;
-    padding : 20px 40px 20px 40px;
-    border-radius : 7%;
-    margin : 0 auto;
-    text-decoration: none;
+.menu ul li .SubLink {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 40px 20px 40px;
+  border-radius: 7%;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
-.menu ul li p
-{
-    display: block;
-    color: white;
-    text-align: center;
-    border-radius : 7%;
-    margin : 0 auto;
-    text-decoration: none;
+.menu ul li p {
+  display: block;
+  color: white;
+  text-align: center;
+  border-radius: 7%;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
-
-.menu ul li .Link :hover
-{
-    display: block;
-    text-align: center;
-    padding : 30px 50px 30px 50px;
-    margin-top : 20%;
-    text-decoration: none;
+.menu ul li .Link :hover {
+  display: block;
+  text-align: center;
+  padding: 30px 50px 30px 50px;
+  margin-top: 20%;
+  text-decoration: none;
 }
 
-.menu ul li .SubLink :hover
-{
-    display: block;
-    text-align: center;
-    padding : 30px 50px 30px 50px;
-    margin-top : 20%;
-    text-decoration: none;
+.menu ul li .SubLink :hover {
+  display: block;
+  text-align: center;
+  padding: 30px 50px 30px 50px;
+  margin-top: 20%;
+  text-decoration: none;
 }
 
-.container
-{
-    margin : auto;
-    display:block;
-    max-width: 100% !important;
-    align-items : center;
-    background-color : rgb(255, 255, 255);
-    /*border : 2px solid rgb(85, 85, 85);*/
+.container {
+  margin: auto;
+  display: block;
+  max-width: 100% !important;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  /*border : 2px solid rgb(85, 85, 85);*/
 }
 
-.sub-container
-{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    flex-wrap:wrap;
-    width:100%;
+.sub-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.sub-menu-div
-{
-    display: none;
-    color:white;
+.sub-menu-div {
+  display: none;
+  color: white;
 }
 
-.sub-menu
-{
+.sub-menu {
   position: absolute;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   list-style-type: none;
   background-color: #333333;
-  z-index: 1;
+  z-index: 11;
 }
 
-.menu ul li .title
-{
-    display: block;
-    color: white;
-    text-align: center;
-    padding : 20px 40px 20px 40px;
-    border-radius : 7%;
-    margin : 0 auto;
-    text-decoration: none;
+.menu ul li .title {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 40px 20px 40px;
+  border-radius: 7%;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
-.sub-menu-li
-{
-    color:white;
+.sub-menu-li {
+  color: white;
 }
 
-.sub-menu-li :hover
-{
-    background-color : #222222;
+.sub-menu-li :hover {
+  background-color: #222222;
 }
 
-.explain-container
-{
-    margin : 20px 10px 20px 20px;
-    background-color:rgba(255, 255, 255, 0.616);
-    /*border : solid 1px black;*/
-    padding : 50px;
-    width: 70%;
-    box-shadow:rgba(0,0,0,0.2);
+.explain-container {
+  margin: 20px 10px 20px 20px;
+  background-color: rgba(255, 255, 255, 0.616);
+  /*border : solid 1px black;*/
+  padding: 50px;
+  width: 70%;
 }
 
-.example-container
-{
-    padding : 50px;
-    width: 50%;
+.example-container {
+  padding: 50px;
+  width: 50%;
 }
 
-.code
-{
-    font-family:Consolas,"courier new";
-
+.code {
+  font-family: Consolas, "courier new";
 }
 
+.ex-font {
+  font-family: Trebuchet MS;
+}

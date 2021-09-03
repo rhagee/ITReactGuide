@@ -6,13 +6,13 @@ import StandardContent from "../../Utils/StandardContent";
 
 const BasicComponent = () => {
     
-    let explain = <Ex title="Component"/>
+    let explain = <Ex title="BASIC COMPONENT"/>
     let code = <Code/>
     let page = <BasicComponentContent/>
 
     return (
     <>
-        <StandardContent explain={explain} code={code} page={page}/>
+        <StandardContent explain={explain} code={code} page={page} multiline={false}/>
     </>
     );
 };

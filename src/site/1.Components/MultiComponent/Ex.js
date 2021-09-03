@@ -1,14 +1,14 @@
 import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import CodeSegment from './../../Utils/CodeSegment';
 
 const Ex = (props) => {
     let {title} = props;
     return (
         <>
-        <center><h1>{title} </h1></center>
+        <center><h1 className="ex-font">{title} </h1></center>
         <br/>
-        <p>
+        <p className="ex-font">
+            <h3>Nested Component</h3><br/>
             In <strong>React</strong> si possono sviluppare applicazioni web che sfruttano le <strong>Nested Components</strong>.<br/>
             Questo è uno dei punti chiave, nonchè vantaggio che da <strong>React</strong> durante lo sviluppo.<br/><br/>
 
@@ -20,27 +20,28 @@ const Ex = (props) => {
             Di base è una pratica che effettuiamo fin dal primo momento, in cui in <code>App.js</code> andiamo a chiamare la nostra <code>Component</code>.<br/>
             Ovvero all'interno del file <code>App.js</code> andiamo a scrivere :<br/><br/>
 
-            <SyntaxHighlighter language="javascript" style={stackoverflowDark}>
+            <CodeSegment language="html">
                 {`
                     <Component>
                     </Component>
                 `}
-            </SyntaxHighlighter>
+            </CodeSegment>
             <center>oppure</center><br/>
-            <SyntaxHighlighter language="javascript" style={stackoverflowDark}>
+            <CodeSegment language="html">
                 {`
                     <Component/>
                 `}
-            </SyntaxHighlighter>
+            </CodeSegment>
 
             Ovvero possiamo creare dei veri e propri <strong>Tag</strong> HTML attraverso le nostre Component sviluppate in Javascript.<br/>
             Ma è possibile solo farlo su file diversi come nel caso di <code>App.js</code> e <code>Component.js</code> ?<br/><br/>
 
             Ovviamente no, possiamo andare a creare <strong>PIU Component</strong> all'interno di <strong>1 solo File</strong> e sfruttarle all'interno del File stesso.<br/><br/>
 
+            <h3>Definizione ed Utilizzo</h3><br/>
             Supponiamo di avere il nostro file Javascript <code>ComponentPrimaria.js</code> scritto come di base : <br/><br/>
 
-            <SyntaxHighlighter language="javascript" style={stackoverflowDark}>
+            <CodeSegment language="javascript">
                 {`
                     /*Import ecc..*/
 
@@ -63,7 +64,7 @@ const Ex = (props) => {
 
                     /*Export ecc..*/
                 `}
-            </SyntaxHighlighter>
+            </CodeSegment>
 
             Ora supponiamo di voler modularizzare la parte dopo il titolo,<br/>
             e supponiamo anche che questa modularizzazione sia utile solo all'interno di questa <strong>Component</strong> e non nel progetto intero.<br/><br/>
@@ -74,7 +75,7 @@ const Ex = (props) => {
 
             <center>Esempio</center><br/>
 
-            <SyntaxHighlighter language="javascript" style={stackoverflowDark}>
+            <CodeSegment language="javascript">
                 {`
                     /*Import ecc..*/
                     
@@ -108,7 +109,7 @@ const Ex = (props) => {
 
                     /*Export ecc..*/
                 `}
-            </SyntaxHighlighter>
+            </CodeSegment>
 
             In questo modo possiamo scrivere due volte <code>ComponentSecondaria</code> e questa si occuperà di fornire il codice HTML in <code>return</code> alla <code>ComponentPrimaria</code>che la chiama.<br/>
             Così quando verrà chiamata la <code>ComponentPrimaria</code> da qualche parte, questa andrà a chiamare la <code>ComponentSecondaria</code> dove necessario.<br/><br/>

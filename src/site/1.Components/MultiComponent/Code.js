@@ -1,14 +1,12 @@
 import React from 'react';
-
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import CodeSegment from './../../Utils/CodeSegment';
 
 const Code = () => {
     return (
         <p>
             {/*<center><h1>Codice: </h1></center>
             <br/>*/}
-            <SyntaxHighlighter language="javascript" style={stackoverflowDark}>
+            <CodeSegment language="javascript">
                 {`
                 import React from 'react';
                 
@@ -54,7 +52,7 @@ const Code = () => {
 
                 export default MultiComponentContent; //Verrà importata dall'esterno solo la MultiComponentContent e non la component Film
                 `} 
-            </SyntaxHighlighter>
+            </CodeSegment>
         </p>
     );
 };
