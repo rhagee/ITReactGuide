@@ -4,6 +4,7 @@ import Code from './Code';
 import StandardContent from './../../Utils/StandardContent';
 import {Card} from 'react-bootstrap';
 import "./style.css";
+import {withRouter} from "react-router-dom";
 
 const Event = () => {
     let explain = <Ex title="EVENT"/>
@@ -55,4 +56,4 @@ const EventContent = () =>
 }
 
 
-export default Event;
+export default withRouter(Event);

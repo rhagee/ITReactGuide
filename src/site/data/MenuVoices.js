@@ -29,12 +29,12 @@ export const MenuVoices = {
             name:"Variabili"
         },
         {
-            to:"/JSX/Array",
-            name: "Array"
+            to:"/JSX/Object",
+            name:"Oggetti"
         },
         {
-            to:"/JSX/Object",
-            name:"Object"
+            to:"/JSX/Array",
+            name: "Array"
         },
         {
             to:"/JSX/Styling",
@@ -48,12 +48,12 @@ export const MenuVoices = {
             name:"Basics"
         },
         {
-            to:"/useState/Array",
-            name: "Array"
-        },
-        {
             to: "/useState/Object",
             name: "Object"
+        },
+        {
+            to:"/useState/Array",
+            name: "Array"
         },
         {
             to: "/useState/MultipleStateValue",

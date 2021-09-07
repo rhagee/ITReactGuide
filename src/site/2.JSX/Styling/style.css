@@ -1,0 +1,19 @@
+.container
+{
+    display:inline-block;
+    width:100%;
+}
+
+.left-part
+{
+    border-radius:10px;
+    border: 1px solid blue;
+    float:left;
+}
+
+.right-part
+{
+    border-radius:10px;
+    border: 1px solid red;
+    float:right;
+}

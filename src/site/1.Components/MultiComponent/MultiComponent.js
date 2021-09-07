@@ -3,6 +3,7 @@ import StandardContent from "../../Utils/StandardContent";
 
 import Ex from './Ex';
 import Code from './Code';
+import {withRouter} from "react-router-dom";
 
 const MultiComponent = () => 
 {
@@ -54,4 +55,4 @@ const Film = () =>
     );
 }
 
-export default MultiComponent;
+export default withRouter(MultiComponent);

@@ -3,6 +3,7 @@ import Ex from './Ex';
 import Code from './Code';
 import StandardContent from './../../Utils/StandardContent';
 import {Card} from 'react-bootstrap';
+import {withRouter} from "react-router-dom";
 
 const List = () => {
     let explain = <Ex title="LIST"/>
@@ -85,4 +86,4 @@ const ListContent = () =>
     ); 
 }
 
-export default List;
+export default withRouter(List);

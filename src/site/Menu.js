@@ -9,6 +9,8 @@ import {MenuVoices} from "./data/MenuVoices";
 //Imported Every Components in the MenuRoutes file that provides an Object containing all the Routes.
 import {MenuRoutes} from "./data/MenuRoutes";
 
+import ScrollToTop from "./Utils/ScrollToTop";
+
 const Menu = () =>
 {
     let {basiccomponents_subvoices,jsx_subvoices,useState_subvoices} = MenuVoices;
@@ -32,6 +34,7 @@ const Content = () =>
 
     return (
                 <>
+                <ScrollToTop />
                         <div className="container">
                         
                             <Switch>
@@ -83,7 +86,7 @@ const MenuHeader = (props) =>
     let {children} = props;
     return(
         <>
-            <div className="d-none d-lg-block menu">  
+            <div className="d-none d-lg-block menu sticky-top">  
                 <ul className="menu-ul">
                     {children}
                 </ul>

@@ -1,15 +1,16 @@
 import React from 'react';
 import CodeSegment from './../../Utils/CodeSegment';
 
+
 const Ex = (props) => {
     let {title} = props;
     return (
         <>
         <center><h1 className="ex-font">{title} </h1></center>
         <br/>
+        <section id="top"></section>
         <p className="ex-font">
-            <br/>
-            
+            <br/> 
             <h3>Cos'è un Evento</h3><br/>
             Un evento non è nient'altro che <strong>un'interazione</strong> dell'utente con i nostri Componenti, ad esempio il "click" su un bottone.<br/>
             Esistono anche altri tipo di eventi, per esempio la modifica di un campo di testo, andare sopra ad un immagine con la freccia, ecc.. ecc.. <br/><br/>

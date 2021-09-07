@@ -2,7 +2,7 @@ import React from 'react';
 import Ex from './Ex';
 import Code from './Code';
 import StandardContent from "../../Utils/StandardContent";
-
+import {withRouter} from "react-router-dom";
 const Props = () => 
 {
     let explain = <Ex title="PROPS AND CHILDREN"/>
@@ -54,4 +54,4 @@ const Film = (props) =>
     );
 }
 
-export default Props;
+export default withRouter(Props);

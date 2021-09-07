@@ -47,12 +47,12 @@ export const MenuRoutes =
             comp:<JSXVariables/>
         },
         {
-            path:"/JSX/Array",
-            comp: <JSXArray/>
-        },
-        {
             path: "/JSX/Object",
             comp: <JSXObject/>
+        },
+        {
+            path:"/JSX/Array",
+            comp: <JSXArray/>
         },
         {
             path: "/JSX/Styling",
@@ -66,12 +66,12 @@ export const MenuRoutes =
             comp:<UseStateBasics/>
         },
         {
-            path:"/useState/Array",
-            comp: <UseStateArray/>
-        },
-        {
             path: "/useState/Object",
             comp: <UseStateObject/>
+        },
+        {
+            path:"/useState/Array",
+            comp: <UseStateArray/>
         },
         {
             path: "/useState/MultipleStateValue",

@@ -2,11 +2,12 @@ import React from 'react';
 import Ex from './Ex';
 import Code from './Code';
 import StandardContent from "../../Utils/StandardContent";
+import {withRouter} from "react-router-dom";
 
 
 const BasicComponent = () => {
     
-    let explain = <Ex title="BASIC COMPONENT"/>
+    let explain = <Ex title="COMPONENT"/>
     let code = <Code/>
     let page = <BasicComponentContent/>
 
@@ -26,4 +27,4 @@ const BasicComponentContent = () =>
 }
 
 
-export default BasicComponent; 
+export default withRouter(BasicComponent); 
