@@ -1,0 +1,50 @@
+.edit-btn
+{
+    border-radius:5px;
+    background-color:#518fe0;
+    box-shadow:1px 1px 10px black;
+    width:100px;
+    height:50px;
+    margin:20px 20px;
+    border:0px;
+    color:white;
+}
+
+.edit-btn:hover
+{
+    background-color:#2b62ab;
+}
+
+.recupera-btn
+{
+    padding:10px;
+    background-color:#2967ec;
+    border-radius:5px;
+    textDecoration:none;
+    color:white;
+}
+
+.recupera-btn:disabled
+{
+    background-color:#465570;
+}
+
+.recupera-btn:hover:enabled
+{
+    background-color:#043ca5; 
+}
+
+.delete-btn
+{
+    padding:10px;
+    background-color:#c23c3c;
+    border-radius:5px;
+    textDecoration:none;
+    color:white;
+}
+
+.delete-btn:hover
+{
+    background-color:#4b1c1c;  
+}
+

@@ -3,7 +3,7 @@ import CodeSegment from './../../Utils/CodeSegment';
 
 const Code = () => {
     return (
-        <p>
+        <>
             {/*<center><h1>Codice: </h1></center>
             <br/>*/}
              <CodeSegment language="javascript">
@@ -28,7 +28,7 @@ const Code = () => {
                 export default BasicComponentContent; 
                 `} 
             </CodeSegment>
-        </p>
+        </>
     );
 };
 

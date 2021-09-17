@@ -1,4 +1,15 @@
 export const MenuVoices = {
+    start_subvoices:
+    [
+        {
+            to:"/Start/Install",
+            name:"Install"
+        },
+        {
+            to:"/Start/CreateProject",
+            name: "Create Project"
+        },
+    ],
     basiccomponents_subvoices:
     [
         {
@@ -56,8 +67,8 @@ export const MenuVoices = {
             name: "Array"
         },
         {
-            to: "/useState/MultipleStateValue",
-            name: "Multiple State Value"
+            to: "/useState/UseReducer",
+            name: "UseReducer"
         }
     ]
 };

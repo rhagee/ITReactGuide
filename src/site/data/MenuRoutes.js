@@ -1,3 +1,7 @@
+import Install from '../0.Start/Install/Install';
+import CreateProject from '../0.Start/CreateProject/CreateProject';
+
+
 import BasicComponent from '../1.Components/BasicComponent/BasicComponent';
 import MultiComponent from '../1.Components/MultiComponent/MultiComponent';
 import Props from '../1.Components/Props/Props';
@@ -13,10 +17,21 @@ import JSXStyling from '../2.JSX/Styling/JSXStyling';
 import UseStateBasics from '../3.useState/Basics/UseStateBasics';
 import UseStateArray from '../3.useState/Array/UseStateArray';
 import UseStateObject from '../3.useState/Object/UseStateObject';
-import MultipleStateValue from '../3.useState/MultipleStateValue/MultipleStateValue';
+import UseReducer from '../3.useState/UseReducer/UseReducer';
 
 export const MenuRoutes = 
 {
+    start:
+    [
+        {
+            path:"/Start/Install",
+            comp:<Install/>
+        },
+        {
+            path:"/Start/CreateProject",
+            comp:<CreateProject/>
+        }
+    ],
     components:
     [
         {
@@ -74,8 +89,8 @@ export const MenuRoutes =
             comp: <UseStateArray/>
         },
         {
-            path: "/useState/MultipleStateValue",
-            comp: <MultipleStateValue/>
+            path: "/useState/UseReducer",
+            comp: <UseReducer/>
         }
     ]
    

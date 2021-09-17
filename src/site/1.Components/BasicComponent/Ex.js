@@ -9,9 +9,13 @@ const Ex = (props) => {
         <>
         <center><h1 className="ex-font">{title} </h1></center>
         <br/>
-        <p className="ex-font">
         <h3>Definizione e Return</h3><br/>
-        Una <code>Component</code> non è nient'altro che una <strong>funzione</strong> contenuta all'interno di un file Javascript, in questo caso una costante che contiene una funzione : <br/><br/>
+        <p className="ex-font">
+            Una <code>Component</code> non è nient'altro che una <strong>funzione</strong> contenuta all'interno di un file Javascript.<br/>
+            <strong>ATTENZIONE</strong> : il file Javascript e i nomi delle Components devono avere obbligatoriamente la prima lettera in Uppercase!<br/><br/>
+            
+            In questo caso la Component è una costante che contiene una funzione : <br/><br/>
+        </p>
         <CodeSegment language="javascript">
         {`
             const ComponentName = () => {
@@ -19,14 +23,16 @@ const Ex = (props) => {
             }
         `}
         </CodeSegment>
-        <br/>
-        <br/>
-        Questa funzione ha come return (ritorno della funzione) un <code>React.Fragment</code> <br/>(li chiameremo <strong>"Frammenti"</strong> per semplicità).
-        <br/>
-        <br/>
-        Che può essere definito in 3 diversi modi :
-        <br/>
-        <br/>
+        <p className="ex-font">
+            <br/>
+            <br/>
+            Questa funzione ha come return (ritorno della funzione) un <code>React.Fragment</code> <br/>(li chiameremo <strong>"Frammenti"</strong> per semplicità).
+            <br/>
+            <br/>
+            Che può essere definito in 3 diversi modi :
+            <br/>
+            <br/>
+        </p>
         <CodeSegment language="html">
         {`
             <React.Fragment>
@@ -34,10 +40,12 @@ const Ex = (props) => {
             </React.Fragment>
         `}
         </CodeSegment>
-
-        <center>oppure</center>
+        <center>
+            <p className="ex-font">
+                oppure
+            </p>
+        </center>
         <br/>
-       
         <CodeSegment language="html">
         {`
             <>
@@ -45,10 +53,11 @@ const Ex = (props) => {
             </>
         `}
         </CodeSegment>
-       
-        <center>oppure</center>
-       
-        <br/>
+        <center>
+            <p className="ex-font">
+                oppure
+            </p>
+        </center>
         <CodeSegment language="html">
         {`
             <div>
@@ -56,10 +65,12 @@ const Ex = (props) => {
             </div>
         `}
         </CodeSegment>
-        <br/>
-        inoltre è possibile effettuare anche :
-        <br/>
-        <br/>
+        <p className="ex-font">
+            <br/>
+            inoltre è possibile effettuare anche :
+            <br/>
+            <br/>
+        </p>
         <CodeSegment language="html">
         {`
             <QualunqueTag>
@@ -68,9 +79,11 @@ const Ex = (props) => {
         `}
         </CodeSegment>
         <h3>Fragment</h3><br/>
-        L'importante è che il <code>return</code> ritorni come elemento <strong>1 solo elemento</strong>, darebbe errore in caso contrario, esempio :
-        <br/>
-        <br/>
+        <p className="ex-font">
+            L'importante è che il <code>return</code> ritorni come elemento <strong>1 solo elemento</strong>, darebbe errore in caso contrario, esempio :
+            <br/>
+            <br/>
+        </p>
         <CodeSegment language="javascript">
             {`
             const ComponentName = () => 
@@ -82,10 +95,11 @@ const Ex = (props) => {
             }
             `}
         </CodeSegment>
-        
-        Poichè stiamo ritornando 2 Frammenti e non uno solo, in questo caso la versione corretta sarebbe (ad esempio) :
-        <br/>
-        <br/>
+        <p className="ex-font">
+            Poichè stiamo ritornando 2 Frammenti e non uno solo, in questo caso la versione corretta sarebbe (ad esempio) :
+            <br/>
+            <br/>
+        </p>
         <CodeSegment language="javascript">
         {`
          const ComponentName = () => 
@@ -99,10 +113,12 @@ const Ex = (props) => {
         }
         `}
         </CodeSegment>
-
-        <center>oppure</center>
-        <br/>
-
+        <center>
+            <p className="ex-font">
+                oppure
+            </p>
+        </center>
+        
         <CodeSegment language="javascript">
             {`
             const ComponentName = () => 
@@ -116,14 +132,16 @@ const Ex = (props) => {
             }
             `}   
         </CodeSegment>
-        
-        La cosa importante è appunto che il Return contenga come "Oggetto ritornato" 1 Frammento, che però può contenerne INFINITI altri.<br/><br/>
-
+        <p className="ex-font">
+            La cosa importante è appunto che il Return contenga come "Oggetto ritornato" 1 Frammento, che però può contenerne INFINITI altri.<br/><br/>
+        </p>
         <h3>Import/Export</h3><br/>
-        Ora che abbiamo la nostra <code>const</code> creata all'interno del nostro file (ad esempio) <code>ComponentName.js</code> dobbiamo solo andarla ad esportare come default<br/>
-        ed importarla dove necessario.<br/>
+        <p className="ex-font">
+            Ora che abbiamo la nostra <code>const</code> creata all'interno del nostro file (ad esempio) <code>ComponentName.js</code> dobbiamo solo andarla ad esportare come default<br/>
+            ed importarla dove necessario.<br/>
 
-        Per esportare come default una <code>const</code> all'interno del file Javascript basterà andare a scrivere al fondo del file Javascript : <br/><br/>
+            Per esportare come default una <code>const</code> all'interno del file Javascript basterà andare a scrivere al fondo del file Javascript : <br/><br/>
+        </p>
         <CodeSegment language="javascript">
             {`
                 /*"ComponentName" è il nome della 
@@ -134,25 +152,28 @@ const Ex = (props) => {
                 export default ComponentName; 
             `}   
         </CodeSegment>
-
-        Dopodichè per importarla nel nostro file di partenza, che abbiamo detto essere <code>App.js</code>, che viene creato direttamente alla creazione del progetto,
-        basterà aggiungere agli <code>import</code> di <code>App.js</code>, quindi all'inizio del file, la nostra Component :<br/><br/>
-
+        <p className="ex-font">
+            Dopodichè per importarla nel nostro file di partenza, che abbiamo detto essere <code>App.js</code>, che viene creato direttamente alla creazione del progetto,
+            basterà aggiungere agli <code>import</code> di <code>App.js</code>, quindi all'inizio del file, la nostra Component :<br/><br/>
+        </p>
         <CodeSegment language="javascript">
             {`
                 import ComponentName from './Path/Della/Component/ComponentName';
             `}   
         </CodeSegment>
-        
-        Dove il <code>./</code> è obbligatorio per indicare che si sta scrivendo un Path e non ci si sta riferendo a delle librerie installate tramite <code>npm</code>.<br/>
-        ed al posto di <code>"Path/DellaComponent/ComponentName"</code> ci va appunto il percorso per arrivare alla component, e poi il nome del file Javascript che continene la Component.<br/><br/>
-        Nel caso in cui si trovassero nella stessa cartella basterà scrivere :<br/><br/>
+        <p className="ex-font">
+            Dove il <code>./</code> è obbligatorio per indicare che si sta scrivendo un Path e non ci si sta riferendo a delle librerie installate tramite <code>npm</code>.<br/>
+            ed al posto di <code>"Path/DellaComponent/ComponentName"</code> ci va appunto il percorso per arrivare alla component, e poi il nome del file Javascript che continene la Component.<br/><br/>
+            Nel caso in cui si trovassero nella stessa cartella basterà scrivere :<br/><br/>
+        </p>
         <CodeSegment language="javascript">
             {`
                 import ComponentName from './ComponentName';
             `}   
         </CodeSegment>
-        Fatto questo potremo utilizzare all'interno di <code>App.js</code> la nostra Component, come fosse un file HTML :<br/><br/>
+        <p className="ex-font">
+            Fatto questo potremo utilizzare all'interno di <code>App.js</code> la nostra Component, come fosse un file HTML :<br/><br/>
+        </p>
         <CodeSegment language="javascript">
             {`
                 import './App.css';
@@ -167,8 +188,9 @@ const Ex = (props) => {
                 export default App;
             `}
         </CodeSegment>
-        E quest'ultima verrà mostrata sulla pagina principale.<br/><br/>
-        Sotto è riportato l'esempio di codice di una <strong>Component</strong> molto semplice, nel momento in cui verrà chiamata sottoforma di <strong>Tag</strong> all'interno di <code>App.js</code>.
+        <p className="ex-font">
+            E quest'ultima verrà mostrata sulla pagina principale.<br/><br/>
+            Sotto è riportato l'esempio di codice di una <strong>Component</strong> molto semplice, nel momento in cui verrà chiamata sottoforma di <strong>Tag</strong> all'interno di <code>App.js</code>.
         </p>
         </>
     );

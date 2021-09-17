@@ -128,7 +128,7 @@ const RedWord = (props) =>
 {
     let {children} = props;
     return(
-        <x style={{color:"red"}}>{children}</x>
+        <span style={{color:"red"}}>{children}</span>
     );
 }
 

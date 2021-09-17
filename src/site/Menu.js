@@ -13,11 +13,12 @@ import ScrollToTop from "./Utils/ScrollToTop";
 
 const Menu = () =>
 {
-    let {basiccomponents_subvoices,jsx_subvoices,useState_subvoices} = MenuVoices;
+    let {start_subvoices,basiccomponents_subvoices,jsx_subvoices,useState_subvoices} = MenuVoices;
     return(
         <Router>
             <MenuHeader>
                     <Logo/>
+                    <DropDownVoice name="Start" voices={start_subvoices}/>
                     <DropDownVoice name="Component" voices={basiccomponents_subvoices}/>
                     <DropDownVoice name="JSX" voices={jsx_subvoices}/>
                     <DropDownVoice name="useState" voices={useState_subvoices}/>
@@ -30,7 +31,7 @@ const Menu = () =>
 
 const Content = () => 
 {
-    let {components,jsx,UseState} = MenuRoutes;
+    let {start,components,jsx,UseState} = MenuRoutes;
 
     return (
                 <>
@@ -38,13 +39,25 @@ const Content = () =>
                         <div className="container">
                         
                             <Switch>
-                                {
+                            {
                                     //COMPONENTS PART OF MENU
-                                    components.map((single)=>
+                                    start.map((single,index)=>
                                     {
                                        let {path,comp} = single;
                                         return(
-                                                <Route path={path}>
+                                                <Route key={index} path={path}>
+                                                    {comp}
+                                                </Route>
+                                        );
+                                    })
+                                }
+                                {
+                                    //COMPONENTS PART OF MENU
+                                    components.map((single,index)=>
+                                    {
+                                       let {path,comp} = single;
+                                        return(
+                                                <Route key={index} path={path}>
                                                     {comp}
                                                 </Route>
                                         );
@@ -52,11 +65,11 @@ const Content = () =>
                                 }
                                  {
                                     //COMPONENTS PART OF MENU
-                                    jsx.map((single)=>
+                                    jsx.map((single,index)=>
                                     {
                                        let {path,comp} = single;
                                         return(
-                                                <Route path={path}>
+                                                <Route key={index} path={path}>
                                                     {comp}
                                                 </Route>
                                         );
@@ -64,11 +77,11 @@ const Content = () =>
                                 }
                                 {
                                       //COMPONENTS PART OF MENU
-                                      UseState.map((single)=>
+                                      UseState.map((single,index)=>
                                       {
                                          let {path,comp} = single;
                                           return(
-                                                  <Route path={path}>
+                                                  <Route key={index} path={path}>
                                                       {comp}
                                                   </Route>
                                           );
@@ -126,10 +139,10 @@ const DropDownVoice = (props) =>
             <p> {name} <MdArrowDropDown style={{width:"15px",height:"15px"}}/></p>
             <div className="sub-menu-div">
                 <ul className="sub-menu">
-                    {voices.map((obj)=>{
+                    {voices.map((obj,index)=>{
                         let {to,name} = obj;
                        return( 
-                       <li className="sub-menu-li">
+                       <li key={index} className="sub-menu-li">
                             <Link className="SubLink" to={to}>{name}</Link>
                         </li>
                         );
