@@ -4,16 +4,16 @@ import StandardContent from "../../Utils/StandardContent";
 import {withRouter} from "react-router-dom";
 
 
-const CreateProject = () => {
+const ProjectStructure = () => {
     
-    let explain = <Ex title="CREATE PROJECT"/>
+    let explain = <Ex title="PROJECT STRUCTURE"/>
 
     return (
     <>
         <StandardContent explain={explain} code={null} page={null} multiline={false}/>
     </>
     );
-};
+}; 
 
 
-export default withRouter(CreateProject); 
+export default withRouter(ProjectStructure); 
