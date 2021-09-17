@@ -5,8 +5,21 @@
 
 .phone-menu {
   width: 100%;
-  height: 80px;
+  color: white;
   background-color: #333333;
+  z-index: 10;
+}
+
+.hidden-menu {
+  max-height: 0px;
+  transition: transform 0.26s ease;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.hidden-menu-show {
+  max-height: auto;
+  transition: transform 0.26s ease;
 }
 
 .menu-ul {
@@ -17,12 +30,28 @@
   background-color: #333333;
 }
 
+.menu-ul-vertical {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4d4d4d;
+}
+
+.menu-li-vertical {
+  margin-top: 30px;
+}
+
 .menu-li {
   margin-top: 30px;
   float: left;
 }
 
 .menu-li :hover {
+  background-color: #222222;
+}
+
+.menu-li-vertical :hover {
   background-color: #222222;
 }
 
@@ -40,7 +69,15 @@
   float: left;
 }
 
+.phone-menu ul .dropDown {
+  margin-top: 30px;
+}
+
 .menu ul .dropDown :hover .sub-menu-div {
+  display: block;
+}
+
+.phone-menu ul .dropDown :hover .sub-menu-div {
   display: block;
 }
 
@@ -49,7 +86,15 @@
   float: left;
 }
 
+.phone-menu ul .standard {
+  margin-top: 30px;
+}
+
 .menu ul .standard :hover {
+  background-color: #333333;
+}
+
+.phone-menu ul .standard :hover {
   background-color: #333333;
 }
 
@@ -70,7 +115,27 @@
   text-decoration: none;
 }
 
+.phone-menu ul li .Link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 40px 20px 40px;
+  border-radius: 7%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
 .menu ul li .SubLink {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 40px 20px 40px;
+  border-radius: 7%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.phone-menu ul li .SubLink {
   display: block;
   color: white;
   text-align: center;
@@ -84,6 +149,15 @@
   display: block;
   color: white;
   text-align: center;
+  border-radius: 7%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.phone-menu ul li p {
+  display: flex;
+  color: white;
+  text-align: left;
   border-radius: 7%;
   margin: 0 auto;
   text-decoration: none;
@@ -114,10 +188,18 @@
   /*border : 2px solid rgb(85, 85, 85);*/
 }
 
-.sub-container {
+.menu .sub-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.phone-menu .sub-container {
+  display: flex;
+  float: left;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
@@ -128,7 +210,7 @@
   color: white;
 }
 
-.sub-menu {
+.menu .sub-menu {
   position: absolute;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -138,10 +220,29 @@
   z-index: 11;
 }
 
+.phone-menu .sub-menu {
+  position: relative;
+  min-width: 160px;
+  padding: 12px 16px;
+  list-style-type: none;
+  background-color: #4d4d4d;
+  z-index: 11;
+}
+
 .menu ul li .title {
   display: block;
   color: white;
   text-align: center;
+  padding: 20px 40px 20px 40px;
+  border-radius: 7%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.phone-menu ul li .title {
+  display: block;
+  color: white;
+  text-align: left;
   padding: 20px 40px 20px 40px;
   border-radius: 7%;
   margin: 0 auto;
