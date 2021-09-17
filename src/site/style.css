@@ -188,18 +188,10 @@
   /*border : 2px solid rgb(85, 85, 85);*/
 }
 
-.menu .sub-container {
+.sub-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.phone-menu .sub-container {
-  display: flex;
-  float: left;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
