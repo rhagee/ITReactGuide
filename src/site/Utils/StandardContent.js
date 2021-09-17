@@ -11,8 +11,12 @@ const StandardContent = (props) => {
     {
         return (
         <div className="sub-container">
-            
-            <div className="row" style={{width:"75%"}}>
+            <div className="d-none d-lg-flex row" style={{width:"75%"}}>
+                <CenterShadowBox>
+                    {explain}
+                </CenterShadowBox> 
+            </div>
+            <div className="d-flex d-lg-none row" style={{width:"100%"}}>
                 <CenterShadowBox>
                     {explain}
                 </CenterShadowBox> 
@@ -27,7 +31,7 @@ const StandardContent = (props) => {
             </div>
             
             {/*Monitor L,M,S,XS size*/}
-            <div className="row d-flex d-xl-none" style={{width:"75%"}}>
+            <div className="row d-flex d-xl-none" style={{width:"100%"}}>
                 <InNewLine/>
             </div>
             
@@ -42,7 +46,12 @@ const StandardContent = (props) => {
     {
         return (
         <div className="sub-container">
-            <div className="row" style={{width:"75%"}}>
+            <div className="d-none d-lg-flex row" style={{width:"75%"}}>
+                <CenterShadowBox>
+                    {explain}
+                </CenterShadowBox> 
+            </div>
+            <div className="d-flex d-lg-nonerow" style={{width:"100%"}}>
                 <CenterShadowBox>
                     {explain}
                 </CenterShadowBox> 
