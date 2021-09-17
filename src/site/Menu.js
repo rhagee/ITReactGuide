@@ -12,17 +12,27 @@ import {MenuRoutes} from "./data/MenuRoutes";
 
 import ScrollToTop from "./Utils/ScrollToTop";
 
+
+
+
 const Menu = () =>
 {
+    const [hiddenMenu,setHiddenMenu] = useState("hidden-menu");
+
+    const handler = (value) =>
+    {
+        setHiddenMenu(value);
+    }
+
     let {start_subvoices,basiccomponents_subvoices,jsx_subvoices,useState_subvoices} = MenuVoices;
     return(
         <Router>
-            <MenuHeader>
+            <MenuHeader handler={handler} hiddenMenu={hiddenMenu}>
                     <Logo/>
-                    <DropDownVoice name="Start" voices={start_subvoices}/>
-                    <DropDownVoice name="Component" voices={basiccomponents_subvoices}/>
-                    <DropDownVoice name="JSX" voices={jsx_subvoices}/>
-                    <DropDownVoice name="useState" voices={useState_subvoices}/>
+                    <DropDownVoice handler={handler}  name="Start" voices={start_subvoices}/>
+                    <DropDownVoice handler={handler} name="Component" voices={basiccomponents_subvoices}/>
+                    <DropDownVoice handler={handler} name="JSX" voices={jsx_subvoices}/>
+                    <DropDownVoice handler={handler} name="useState" voices={useState_subvoices}/>
                     {/*<MenuVoice to="/" name="END"/>*/}
             </MenuHeader>
             <Content/>
@@ -98,8 +108,8 @@ const Content = () =>
 
 const MenuHeader = (props) =>
 {
-    let {children} = props;
-    const [hiddenMenu,setHiddenMenu] = useState("hidden-menu");
+
+    const {hiddenMenu,handler,children} = props;
     return(
         <>
             <div className="d-none d-lg-block menu sticky-top">  
@@ -108,7 +118,7 @@ const MenuHeader = (props) =>
                 </ul>
             </div>
             <div className="d-block d-lg-none phone-menu sticky-top">
-                <MdMenu onClick={() => {hiddenMenu=="hidden-menu" ? setHiddenMenu("hidden-menu-show") : setHiddenMenu("hidden-menu");}} style={{width:"50px",height:"70px",color:"white",marginLeft:"20px",marginTop:"5px",cursor:"pointer"}}/>
+                <MdMenu onClick={() => {hiddenMenu=="hidden-menu" ? handler("hidden-menu-show") : handler("hidden-menu");}} style={{width:"50px",height:"70px",color:"white",marginLeft:"20px",marginTop:"5px",cursor:"pointer"}}/>
                 <div className={hiddenMenu}>
                 <ul className="menu-ul-vertical">
                     {children}
@@ -141,7 +151,7 @@ const MenuVoice = (props) =>
 
 const DropDownVoice = (props) =>
 {
-    let {name,voices} = props;
+    const {handler,name,voices} = props;
     return(
         <li className="dropDown">
         <div className="title">
@@ -151,9 +161,15 @@ const DropDownVoice = (props) =>
                     {voices.map((obj,index)=>{
                         let {to,name} = obj;
                        return( 
-                       <li key={index} className="sub-menu-li">
+                           <>
+                       <li key={index} className="d-none d-lg-block sub-menu-li">
                             <Link className="SubLink" to={to}>{name}</Link>
                         </li>
+                        
+                        <li key={index} className="d-block d-lg-none sub-menu-li">
+                            <Link onClick={() => {handler("hidden-menu");}} className="SubLink" to={to}>{name}</Link>
+                        </li>
+                        </>
                         );
                     })}
                 </ul>
