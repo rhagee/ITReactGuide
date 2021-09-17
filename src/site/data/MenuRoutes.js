@@ -1,5 +1,7 @@
 import Install from '../0.Start/Install/Install';
 import CreateProject from '../0.Start/CreateProject/CreateProject';
+import ImportExport from '../0.Start/ImportExport/ImportExport';
+import ProjectStructure from '../0.Start/ProjectStructure/ProjectStructure';
 
 
 import BasicComponent from '../1.Components/BasicComponent/BasicComponent';
@@ -30,6 +32,14 @@ export const MenuRoutes =
         {
             path:"/Start/CreateProject",
             comp:<CreateProject/>
+        },
+        {
+            path:"/Start/ImportExport",
+            comp:<ImportExport/>
+        },
+        {
+            path:"/Start/ProjectStructure",
+            comp:<ProjectStructure/>
         }
     ],
     components:

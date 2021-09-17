@@ -3,6 +3,7 @@ import logo from './assets/ReactLogo.png';
 import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom';
 import { MdArrowDropDown, MdMenu} from "react-icons/md";
 import './style.css';
+import GetStarted from "./GetStarted";
 
 //Imported object that contains the voice content from MenuVoices
 import {MenuVoices} from "./data/MenuVoices";
@@ -37,8 +38,9 @@ const Content = () =>
                 <>
                 <ScrollToTop />
                         <div className="container">
-                        
+                           
                             <Switch>
+                            <Route exact path="/"><GetStarted/></Route>
                             {
                                     //COMPONENTS PART OF MENU
                                     start.map((single,index)=>
@@ -115,9 +117,10 @@ const Logo = () =>
 {
     return(
         <>
-            
-            <li className="standard"><p className="menu-title"><img style={{width:"100px",marginLeft:"-20%"}} src={logo}/>React</p></li>
-            <li className="menu-li separator"></li>
+            <Link to="/">
+                <li className="standard"><p className="menu-title"><img style={{width:"100px",marginLeft:"-20%"}} src={logo}/>React</p></li>
+                <li className="menu-li separator"></li>
+            </Link>
         </>
     );
 }

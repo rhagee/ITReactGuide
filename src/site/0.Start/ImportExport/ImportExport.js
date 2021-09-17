@@ -4,9 +4,9 @@ import StandardContent from "../../Utils/StandardContent";
 import {withRouter} from "react-router-dom";
 
 
-const CreateProject = () => {
+const ImportExport = () => {
     
-    let explain = <Ex title="CREATE PROJECT"/>
+    let explain = <Ex title="IMPORT / EXPORT"/>
 
     return (
     <>
@@ -16,4 +16,4 @@ const CreateProject = () => {
 };
 
 
-export default withRouter(CreateProject); 
+export default withRouter(ImportExport); 

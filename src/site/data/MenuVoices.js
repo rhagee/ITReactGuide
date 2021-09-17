@@ -9,6 +9,14 @@ export const MenuVoices = {
             to:"/Start/CreateProject",
             name: "Create Project"
         },
+        {
+            to:"/Start/ImportExport",
+            name: "Import / Export"
+        },
+        {
+            to:"/Start/ProjectStructure",
+            name: "Project Structure"
+        },
     ],
     basiccomponents_subvoices:
     [

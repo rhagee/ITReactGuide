@@ -6,7 +6,7 @@ import {withRouter} from "react-router-dom";
 
 const Install = () => {
     
-    let explain = <Ex title="Install"/>
+    let explain = <Ex title="INSTALL"/>
 
     return (
     <>
