@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logo from './assets/ReactLogo.png';
 import {BrowserRouter as Router,Route,Switch,Link} from 'react-router-dom';
 import { MdArrowDropDown, MdMenu} from "react-icons/md";
@@ -99,6 +99,7 @@ const Content = () =>
 const MenuHeader = (props) =>
 {
     let {children} = props;
+    const [hiddenMenu,setHiddenMenu] = useState("hidden-menu");
     return(
         <>
             <div className="d-none d-lg-block menu sticky-top">  
@@ -106,8 +107,13 @@ const MenuHeader = (props) =>
                     {children}
                 </ul>
             </div>
-            <div className="d-block d-lg-none phone-menu">
-                <MdMenu style={{width:"50px",height:"70px",color:"white",marginLeft:"20px",marginTop:"5px"}}/>
+            <div className="d-block d-lg-none phone-menu sticky-top">
+                <MdMenu onClick={() => {hiddenMenu=="hidden-menu" ? setHiddenMenu("hidden-menu-show") : setHiddenMenu("hidden-menu");}} style={{width:"50px",height:"70px",color:"white",marginLeft:"20px",marginTop:"5px",cursor:"pointer"}}/>
+                <div className={hiddenMenu}>
+                <ul className="menu-ul-vertical">
+                    {children}
+                </ul>
+                </div>
             </div>
         </>
     );
@@ -117,7 +123,7 @@ const Logo = () =>
 {
     return(
         <>
-            <Link to="/">
+            <Link className="d-none d-lg-block" to="/">
                 <li className="standard"><p className="menu-title"><img style={{width:"100px",marginLeft:"-20%"}} src={logo}/>React</p></li>
                 <li className="menu-li separator"></li>
             </Link>
