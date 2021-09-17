@@ -23,7 +23,7 @@ const Menu = () =>
                     <DropDownVoice name="Component" voices={basiccomponents_subvoices}/>
                     <DropDownVoice name="JSX" voices={jsx_subvoices}/>
                     <DropDownVoice name="useState" voices={useState_subvoices}/>
-                    <MenuVoice to="/BasicComponent" name="END"/>
+                    {/*<MenuVoice to="/" name="END"/>*/}
             </MenuHeader>
             <Content/>
         </Router>
