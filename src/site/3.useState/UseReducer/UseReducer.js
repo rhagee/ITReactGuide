@@ -97,7 +97,7 @@ const UseReducerContent = () =>
         <>
            { state.isError ? <p style={{color:"white",backgroundColor:"#b31919",padding:"10px",borderRadius:"5px"}}><strong>ERRORE</strong> : Non hai riempito alcuni campi!</p> : null }
              <h1>Aggiungi Profilo</h1>
-             <div className="profile-container" style={{backgroundColor:colors.at(state.colorPos)}}>
+             <div className="pers-profile-container" style={{backgroundColor:colors.at(state.colorPos)}}>
                 <label>Nome</label><input  type="text" onChange={(event) => {profile.nome = event.target.value; console.log(profile.nome);}}></input><br/>
                 <label>Cognome</label><input  type="text" onChange={(event) => {profile.cognome = event.target.value;}}></input><br/>
                 <label>Eta</label><input type="text" onChange={(event) => {profile.eta = event.target.value;}}></input><br/>
@@ -120,7 +120,7 @@ const UseReducerContent = () =>
                     let {id,nome,cognome,eta,descrizione,color} = obj;
                     return(
                     <div key={id}>
-                    <div className="profile-container" style={{backgroundColor:color}}>
+                    <div className="pers-profile-container" style={{backgroundColor:color}}>
                         <h3>{nome}</h3>
                         <h3>{cognome}</h3>
                         <h6>{eta} anni</h6>
