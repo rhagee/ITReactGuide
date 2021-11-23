@@ -24,7 +24,7 @@ const Menu = () =>
         setHiddenMenu(value);
     }
 
-    let {start_subvoices,basiccomponents_subvoices,jsx_subvoices,useState_subvoices} = MenuVoices;
+    let {start_subvoices,basiccomponents_subvoices,jsx_subvoices,useState_subvoices,useEffect_subvoices} = MenuVoices;
     return(
         <Router>
             <MenuHeader handler={handler} hiddenMenu={hiddenMenu}>
@@ -33,6 +33,7 @@ const Menu = () =>
                     <DropDownVoice handler={handler} name="Component" voices={basiccomponents_subvoices}/>
                     <DropDownVoice handler={handler} name="JSX" voices={jsx_subvoices}/>
                     <DropDownVoice handler={handler} name="useState" voices={useState_subvoices}/>
+                    <DropDownVoice handler={handler} name="useEffect" voices={useEffect_subvoices}/>
                     {/*<MenuVoice to="/" name="END"/>*/}
             </MenuHeader>
             <Content/>
@@ -42,7 +43,7 @@ const Menu = () =>
 
 const Content = () => 
 {
-    let {start,components,jsx,UseState} = MenuRoutes;
+    let {start,components,jsx,UseState,UseEffect} = MenuRoutes;
 
     return (
                 <>
@@ -98,6 +99,18 @@ const Content = () =>
                                                   </Route>
                                           );
                                       })
+                                }
+                                {
+                                    //COMPONENTS PART OF MENU
+                                    UseEffect.map((single,index)=>
+                                    {
+                                       let {path,comp} = single;
+                                        return(
+                                                <Route key={index} path={path}>
+                                                    {comp}
+                                                </Route>
+                                        );
+                                    })
                                 }
                             </Switch>
                         </div>

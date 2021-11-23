@@ -7,7 +7,7 @@ import {withRouter} from "react-router-dom";
 
 const BasicComponent = () => {
     
-    let explain = <Ex title="BASIC COMPONENT"/>
+    let explain = <Ex title="COMPONENT BASICS"/>
     let code = <Code/>
     let page = <BasicComponentContent/>
 

@@ -22,7 +22,7 @@ export const MenuVoices = {
     [
         {
             to:"/Components/BasicComponent",
-            name:"Basic Component"
+            name:"Basics"
         },
         {
             to:"/Components/MultiComponent",
@@ -78,5 +78,20 @@ export const MenuVoices = {
             to: "/useState/UseReducer",
             name: "UseReducer"
         }
+    ],
+    useEffect_subvoices:
+    [
+        {
+            to:"/useEffect/Basics",
+            name:"Basics"
+        },
+        {
+            to: "/useEffect/CleanUp",
+            name: "Clean Up"
+        },
+        {
+            to:"/useEffect/FetchData",
+            name: "Fetch Data"
+        },
     ]
 };

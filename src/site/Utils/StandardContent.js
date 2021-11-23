@@ -16,6 +16,7 @@ const StandardContent = (props) => {
                     {explain}
                 </CenterShadowBox> 
             </div>
+            
             <div className="d-flex d-lg-none row" style={{width:"100%"}}>
                 <CenterShadowBox>
                     {explain}
@@ -51,7 +52,7 @@ const StandardContent = (props) => {
                     {explain}
                 </CenterShadowBox> 
             </div>
-            <div className="d-flex d-lg-nonerow" style={{width:"100%"}}>
+            <div className="d-flex d-lg-none row" style={{width:"100%"}}>
                 <CenterShadowBox>
                     {explain}
                 </CenterShadowBox> 

@@ -21,6 +21,11 @@ import UseStateArray from '../3.useState/Array/UseStateArray';
 import UseStateObject from '../3.useState/Object/UseStateObject';
 import UseReducer from '../3.useState/UseReducer/UseReducer';
 
+import UseEffectBasics from '../4.useEffect/Basics/UseEffectBasics';
+import UseEffectCleanUp from '../4.useEffect/CleanUp/UseEffectCleanUp';
+import UseEffectFetchData from '../4.useEffect/FetchData/UseEffectFetchData';
+
+
 export const MenuRoutes = 
 {
     start:
@@ -101,6 +106,21 @@ export const MenuRoutes =
         {
             path: "/useState/UseReducer",
             comp: <UseReducer/>
+        }
+    ],
+    UseEffect:
+    [
+        {
+            path:"/useEffect/Basics",
+            comp:<UseEffectBasics/>
+        },
+        {
+            path: "/useEffect/CleanUp",
+            comp: <UseEffectCleanUp/>
+        },
+        {
+            path:"/useEffect/FetchData",
+            comp: <UseEffectFetchData/>
         }
     ]
    
